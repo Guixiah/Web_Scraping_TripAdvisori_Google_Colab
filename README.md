@@ -1,4 +1,4 @@
-# :mag_right: Web Scraping tripAdvisori Google Colab. :mag_right:
+# :mag_right: Web Scraping TripAdvisori Google Colab. :mag_right:
 
 Realiza web scraping no TripAdvisori trazendo os principai indicadores dos hoteis selecionados. 
  
