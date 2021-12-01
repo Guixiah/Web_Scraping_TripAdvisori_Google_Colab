@@ -23,6 +23,6 @@ Esta é sua configuração default
 ![alt text](https://github.com/Guixiah/Web_Scraping_TripAdvisori_Google_Colab/blob/main/Imagens/web_scraping_tripadvisori/web_scraping_tripadvisori.PNG?raw=true)
 
 
-Na planilha *URL_HOTEIS_BH.xlsx* deve-se inserir todos os campos para que o código busque os resultados.
+Na planilha *URL_HOTEIS_BH.xlsx* deve-se inserir todos os campos para que o código busque os resultados solicitados.
 
-Depois disso apenas realizar o upload dos arquivos ao colab e deixar rodar. 
+Depois disso apenas realizar o upload dos arquivos ao Google Colab e deixar rodar. 
