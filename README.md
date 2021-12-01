@@ -1,7 +1,8 @@
-# web_scraping_tripadvisori_Google_Colab
- Realiza web scraping no TripAdvisori trazendo os principai indicadores dos hoteis selecionados. 
+# :mag_right: Web Scraping tripAdvisori Google Colab. :mag_right:
+
+Realiza web scraping no TripAdvisori trazendo os principai indicadores dos hoteis selecionados. 
  
-# Projeto com o intuito acadêmico e de curiosidade própria.
+# :page_facing_up:Projeto com o intuito acadêmico e de curiosidade própria.:page_facing_up:
 
 # Como usar.
 
