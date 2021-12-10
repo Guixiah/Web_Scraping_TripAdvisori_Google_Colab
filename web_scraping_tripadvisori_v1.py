@@ -80,6 +80,43 @@ for i in Url_TRIPADVISOR:
   Ruim.append(Contador[3])
   Horrivel.append(Contador[4])
 
+
+#Trata as listas Criadas
+for i,v in enumerate(Excelente):
+  if '.' in v:
+    item = v.replace(".","")
+    Excelente[i] = item
+  else:
+    pass
+
+for i,v in enumerate(Muito_Bom):
+  if '.' in v:
+    item = v.replace(".","")
+    Muito_Bom[i] = item
+  else:
+    pass
+
+for i,v in enumerate(Razoavel):
+  if '.' in v:
+    item = v.replace(".","")
+    Razoavel[i] = item
+  else:
+    pass
+    
+for i,v in enumerate(Ruim):
+  if ',' in v:
+    item = v.replace(".","")
+    Ruim[i] = item
+  else:
+    pass
+
+for i,v in enumerate(Horrivel):
+  if ',' in v:
+    item = v.replace(".","")
+    Horrivel[i] = item
+  else:
+    pass
+
 #Cria a Tabela com os Dados Minerados.
 
 Dic_Hoteis = {}
@@ -102,15 +139,16 @@ Dic_Hoteis["Horrivel"] = Horrivel.copy()
 #Arquivo de segurança.
 
 Web_Atual = pd.DataFrame(Dic_Hoteis)
+Web_Atual[["Excelente", "Muito Bom","Razoavel","Ruim","Horrivel"]] = Web_Atual[["Excelente", "Muito Bom","Razoavel","Ruim","Horrivel"]].apply(pd.to_numeric)
 Dia = datetime.today().strftime('%d_%m_%Y')
-Web_Atual.to_excel((f'web_scraping_tripadvisori_{Dia}.xlsx'),index=False )
-files.download(f'web_scraping_tripadvisori_{Dia}.xlsx')
+Web_Atual.to_excel((f'web_scraping_tripadvisor_{Dia}.xlsx'),index=False )
+files.download(f'web_scraping_tripadvisor_{Dia}.xlsx')
 
 #Baixa os Arquivos Criados e Atualizados.
 #Arquivo de segurança.
 
-web_scraping_Antigo = pd.read_excel('web_scraping_tripadvisori.xlsx')
+web_scraping_Antigo = pd.read_excel('web_scraping_tripadvisor.xlsx')
 Concatenado = pd.concat([web_scraping_Antigo, Web_Atual], ignore_index=True)
 Web_Atualizado = pd.DataFrame(Concatenado)
-Web_Atualizado.to_excel(('web_scraping_tripadvisori.xlsx'),index=False )
-files.download('web_scraping_tripadvisori.xlsx')
+Web_Atualizado.to_excel(('web_scraping_tripadvisor.xlsx'),index=False )
+files.download('web_scraping_tripadvisor.xlsx')
